@@ -41,7 +41,7 @@ public class ProductController {
         @RequestParam(name="quantity", required=false, defaultValue = "1") int quantity) {
             int id = products.get(products.size() - 1).getId()+ 1;
             Product product = new Product(id, name, price, description, quantity);
-         
+            products.add(product);
 		return product;    
 	}
 
